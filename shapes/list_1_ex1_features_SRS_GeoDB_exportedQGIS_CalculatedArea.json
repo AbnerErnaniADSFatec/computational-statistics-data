@@ -1,0 +1,46 @@
+{
+    "type": "FeatureCollection",
+    "name": "list_1_ex1_features_SRS_GeoDB_exportedQGIS_CalculatedArea",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "description": "Polígono da imagem",
+                "área": "7778330"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -46.400039993813003,
+                            -23.776118828670999
+                        ],
+                        [
+                            -46.373547725386999,
+                            -23.776356788603
+                        ],
+                        [
+                            -46.373821096111001,
+                            -23.802362888731999
+                        ],
+                        [
+                            -46.400318633007998,
+                            -23.802124637066001
+                        ],
+                        [
+                            -46.400039993813003,
+                            -23.776118828670999
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}

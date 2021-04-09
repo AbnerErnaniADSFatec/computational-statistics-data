@@ -1,0 +1,40 @@
+{
+    "type": "FeatureCollection",
+    "name": "list_1_ex1_features_SRS_GeoDB_intersection_exported",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "description": "Pontos críticos da área tracejada",
+                "area": 7778330
+            },
+            "geometry": {
+                "type": "MultiPoint",
+                "coordinates": [
+                    [
+                        -46.39071,
+                        -23.77786
+                    ],
+                    [
+                        -46.38888,
+                        -23.78597
+                    ],
+                    [
+                        -46.38021,
+                        -23.78024
+                    ],
+                    [
+                        -46.37767,
+                        -23.79364
+                    ]
+                ]
+            }
+        }
+    ]
+}

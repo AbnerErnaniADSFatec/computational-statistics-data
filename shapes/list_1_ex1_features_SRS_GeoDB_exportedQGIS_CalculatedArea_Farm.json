@@ -1,0 +1,66 @@
+{
+    "type": "FeatureCollection",
+    "name": "list_1_ex1_features_SRS_GeoDB_exportedQGIS_CalculatedArea_Farm",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "description": "Área tracejada",
+                "area": 4433556
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -46.38317,
+                            -23.77019
+                        ],
+                        [
+                            -46.3656,
+                            -23.77316
+                        ],
+                        [
+                            -46.36515,
+                            -23.78566
+                        ],
+                        [
+                            -46.37767,
+                            -23.79364
+                        ],
+                        [
+                            -46.38888,
+                            -23.78597
+                        ],
+                        [
+                            -46.38021,
+                            -23.78024
+                        ],
+                        [
+                            -46.39071,
+                            -23.77786
+                        ],
+                        [
+                            -46.38798,
+                            -23.77314
+                        ],
+                        [
+                            -46.38317,
+                            -23.77019
+                        ],
+                        [
+                            -46.38317,
+                            -23.77019
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}
