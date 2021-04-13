@@ -12,7 +12,7 @@
             "type": "Feature",
             "properties": {
                 "description": "Pontos críticos da área tracejada",
-                "area": 7778330
+                "description_2": "Polígono da imagem"
             },
             "geometry": {
                 "type": "MultiPoint",

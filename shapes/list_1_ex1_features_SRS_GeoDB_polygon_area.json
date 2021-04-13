@@ -6,7 +6,7 @@
             "type": "Feature",
             "properties": {
                 "description": "Área tracejada",
-                "area": 4433556
+                "area_m2": 4433556.368770269
             },
             "geometry": {
                 "type": "Polygon",
