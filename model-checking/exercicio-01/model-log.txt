@@ -1,0 +1,123 @@
+PRISM
+=====
+
+Version: 4.6
+Date: Wed May 19 08:40:45 BRT 2021
+Hostname: abner-bdc-funcate
+Memory limits: cudd=1g, java(heap)=910.5m
+
+Type:        DTMC
+Modules:     dtmc_ex01 
+Variables:   s 
+
+---------------------------------------------------------------------
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 4 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Time for model construction: 0.027 seconds.
+
+Type:        DTMC
+States:      7 (1 initial)
+Transitions: 14
+
+Transition matrix: 43 nodes (10 terminal), 14 minterms, vars: 3r/3c
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ true U "a" ]
+
+Prob0: 4 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+yes = 7, no = 0, maybe = 0
+
+Value in the initial state: 1.0
+
+Time for model checking: 0.002 seconds.
+
+Result: 1.0 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Model checking: P>=0.8 [ true U "a" ]
+
+Prob0: 4 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+yes = 7, no = 0, maybe = 0
+
+Property satisfied in 1 of 1 initial states.
+
+Time for model checking: 0.001 seconds.
+
+Result: true (property satisfied in the initial state)
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ "b" U<=10 "a" ]
+
+Prob0: 4 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+yes = 2, no = 1, maybe = 4
+
+Computing probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=3, nodes=29] [1.4 KB]
+Adding explicit sparse matrices... [levels=3, num=1, compact] [0.1 KB]
+Creating vector for yes... [dist=2, compact] [0.0 KB]
+Allocating iteration vectors... [2 x 0.1 KB]
+TOTAL: [1.6 KB]
+
+Starting iterations...
+
+Iterative method: 10 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Value in the initial state: 0.3307799719300919
+
+Time for model checking: 0.029 seconds.
+
+Result: 0.3307799719300919 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Model checking: P<=0.55 [ "b" U<=10 "a" ]
+
+Prob0: 4 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+yes = 2, no = 1, maybe = 4
+
+Computing probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=3, nodes=29] [1.4 KB]
+Adding explicit sparse matrices... [levels=3, num=1, compact] [0.1 KB]
+Creating vector for yes... [dist=2, compact] [0.0 KB]
+Allocating iteration vectors... [2 x 0.1 KB]
+TOTAL: [1.6 KB]
+
+Starting iterations...
+
+Iterative method: 10 iterations in 0.01 seconds (average 0.000100, setup 0.01)
+
+Property satisfied in 1 of 1 initial states.
+
+Time for model checking: 0.0 seconds.
+
+Result: true (property satisfied in the initial state)
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ X ("a"&!("b")) ]
+
+Value in the initial state: 0.0
+
+Time for model checking: 0.001 seconds.
+
+Result: 0.0 (value in the initial state)

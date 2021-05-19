@@ -1,0 +1,395 @@
+
+Model checking: R{"transition"}=? [ I=5 ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 7 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Time for model construction: 0.001 seconds.
+
+Type:        CTMC
+States:      9 (1 initial)
+Transitions: 13
+
+Rate matrix: 74 nodes (10 terminal), 13 minterms, vars: 5r/5c
+
+Computing probabilities...
+Engine: Hybrid
+
+Number of non-absorbing states: 9 of 9 (100.0%)
+
+Building hybrid MTBDD matrix... [levels=5, nodes=75] [3.5 KB]
+Adding explicit sparse matrices... [levels=5, num=1, compact] [0.1 KB]
+Creating vector for diagonals... [dist=9, compact] [0.1 KB]
+Allocating iteration vectors... [3 x 0.1 KB]
+TOTAL: [3.9 KB]
+
+Uniformisation: q.t = 102.204000 x 5.000000 = 511.020000
+Fox-Glynn: left = 350, right = 705
+
+Starting iterations...
+
+Steady state detected at iteration 1
+
+Iterative method: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Value in the initial state: 365.0
+
+Time for model checking: 0.0 seconds.
+
+Result: 365.0 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Model checking: R{"transition"}=? [ I=0 ]
+
+Value in the initial state: 365.0
+
+Time for model checking: 0.0 seconds.
+
+Result: 365.0 (value in the initial state)
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s crashed 
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s crashed 
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s crashed 
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s crashed 
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s crashed 
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s crashed 
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s crashed 
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s crashed 
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s crashed 
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s r crashed 
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s crashed 
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s crashed 
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s crashed 
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s crashed 
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s crashed 
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s crashed 
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s crashed 
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s crashed 
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s crashed 
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s crashed 
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s crashed 
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s crashed 
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s crashed 
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s crashed 
+
+---------------------------------------------------------------------
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 7 iterations in 0.00 seconds (average 0.000143, setup 0.00)
+
+Time for model construction: 0.002 seconds.
+
+Type:        CTMC
+States:      9 (1 initial)
+Transitions: 13
+
+Rate matrix: 74 nodes (10 terminal), 13 minterms, vars: 5r/5c
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ ("sleep1" U "sleep_mode")|("sleep2" U "sleep_mode") ]
+
+Building deterministic automaton (for ("L0" U "L1")|("L2" U "L1"))...
+DFA has 5 states, 1 goal states.
+Time for deterministic automaton translation: 0.03 seconds.
+
+Constructing MC-DFA product...
+
+Reachability (BFS): 7 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+States:      9 (1 initial)
+Transitions: 13
+
+Transition matrix: 80 nodes (10 terminal), 13 minterms, vars: 8r/8c
+
+Skipping BSCC computation since acceptance is defined via goal states...
+
+Computing reachability probabilities...
+
+Diagonals vector: 33 nodes (10 terminal), 9 minterms
+Embedded Markov chain: 81 nodes (10 terminal), 13 minterms
+
+yes = 0, no = 9, maybe = 0
+
+Value in the initial state: 0.0
+
+Time for model checking: 0.039 seconds.
+
+Result: 0.0 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ true U>=2.7 "sleep_mode" ]
+
+Diagonals vector: 30 nodes (10 terminal), 9 minterms
+Embedded Markov chain: 75 nodes (10 terminal), 13 minterms
+
+Prob0: 6 iterations in 0.00 seconds (average 0.000167, setup 0.00)
+
+Prob1: 7 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+yes = 2, no = 1, maybe = 6
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=5, nodes=43] [2.0 KB]
+Adding explicit sparse matrices... [levels=5, num=1, compact] [0.1 KB]
+Creating vector for diagonals... [dist=1, compact] [0.0 KB]
+Creating vector for RHS... [dist=2, compact] [0.0 KB]
+Allocating iteration vectors... [2 x 0.1 KB]
+TOTAL: [2.3 KB]
+
+Starting iterations...
+
+Jacobi: 7 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Computing probabilities...
+Engine: Hybrid
+
+Number of non-absorbing states: 9 of 9 (100.0%)
+
+Building hybrid MTBDD matrix... [levels=5, nodes=75] [3.5 KB]
+Adding explicit sparse matrices... [levels=5, num=1, compact] [0.1 KB]
+Creating vector for diagonals... [dist=9, compact] [0.1 KB]
+Allocating iteration vectors... [3 x 0.1 KB]
+TOTAL: [3.9 KB]
+
+Uniformisation: q.t = 102.204000 x 2.700000 = 275.950800
+Fox-Glynn: left = 0, right = 368
+
+Starting iterations...
+
+Iterative method: 368 iterations in 0.00 seconds (average 0.000005, setup 0.00)
+
+Value in the initial state: 0.999985976945054
+
+Time for model checking: 0.003 seconds.
+
+Result: 0.999985976945054 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Model checking: P<=0.10 [ true U>=2.7 "sleep_mode" ]
+
+Diagonals vector: 30 nodes (10 terminal), 9 minterms
+Embedded Markov chain: 75 nodes (10 terminal), 13 minterms
+
+Prob0: 6 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Prob1: 7 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+yes = 2, no = 1, maybe = 6
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=5, nodes=43] [2.0 KB]
+Adding explicit sparse matrices... [levels=5, num=1, compact] [0.1 KB]
+Creating vector for diagonals... [dist=1, compact] [0.0 KB]
+Creating vector for RHS... [dist=2, compact] [0.0 KB]
+Allocating iteration vectors... [2 x 0.1 KB]
+TOTAL: [2.3 KB]
+
+Starting iterations...
+
+Jacobi: 7 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Computing probabilities...
+Engine: Hybrid
+
+Number of non-absorbing states: 9 of 9 (100.0%)
+
+Building hybrid MTBDD matrix... [levels=5, nodes=75] [3.5 KB]
+Adding explicit sparse matrices... [levels=5, num=1, compact] [0.1 KB]
+Creating vector for diagonals... [dist=9, compact] [0.1 KB]
+Allocating iteration vectors... [3 x 0.1 KB]
+TOTAL: [3.9 KB]
+
+Uniformisation: q.t = 102.204000 x 2.700000 = 275.950800
+Fox-Glynn: left = 0, right = 368
+
+Starting iterations...
+
+Iterative method: 368 iterations in 0.00 seconds (average 0.000003, setup 0.00)
+
+Property satisfied in 0 of 1 initial states.
+
+Time for model checking: 0.002 seconds.
+
+Result: false (property not satisfied in the initial state)
+
+Type:        CTMC
+Modules:     ctmc_ex05 
+Variables:   s 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ true U<=8 "crash" ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 7 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Time for model construction: 0.001 seconds.
+
+Type:        CTMC
+States:      9 (1 initial)
+Transitions: 13
+
+Rate matrix: 56 nodes (10 terminal), 13 minterms, vars: 4r/4c
+
+Computing probabilities...
+Engine: Hybrid
+
+Number of non-absorbing states: 8 of 9 (88.9%)
+
+Building hybrid MTBDD matrix... [levels=4, nodes=49] [2.3 KB]
+Adding explicit sparse matrices... [levels=4, num=1, compact] [0.1 KB]
+Creating vector for diagonals... [dist=9, compact] [0.1 KB]
+Allocating iteration vectors... [3 x 0.1 KB]
+TOTAL: [2.7 KB]
+
+Uniformisation: q.t = 102.204000 x 8.000000 = 817.632000
+Fox-Glynn: left = 614, right = 1062
+
+Starting iterations...
+
+Iterative method: 1062 iterations in 0.00 seconds (average 0.000003, setup 0.00)
+
+Value in the initial state: 2.4237486641356294E-4
+
+Time for model checking: 0.001 seconds.
+
+Result: 2.4237486641356294E-4 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ true U>=2.7 "sleep_mode" ]
+
+Diagonals vector: 21 nodes (10 terminal), 9 minterms
+Embedded Markov chain: 54 nodes (10 terminal), 13 minterms
+
+Prob0: 6 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Prob1: 7 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+yes = 2, no = 1, maybe = 6
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=4, nodes=33] [1.5 KB]
+Adding explicit sparse matrices... [levels=4, num=1, compact] [0.1 KB]
+Creating vector for diagonals... [dist=1, compact] [0.0 KB]
+Creating vector for RHS... [dist=2, compact] [0.0 KB]
+Allocating iteration vectors... [2 x 0.1 KB]
+TOTAL: [1.8 KB]
+
+Starting iterations...
+
+Jacobi: 7 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Computing probabilities...
+Engine: Hybrid
+
+Number of non-absorbing states: 9 of 9 (100.0%)
+
+Building hybrid MTBDD matrix... [levels=4, nodes=57] [2.7 KB]
+Adding explicit sparse matrices... [levels=4, num=1, compact] [0.1 KB]
+Creating vector for diagonals... [dist=9, compact] [0.1 KB]
+Allocating iteration vectors... [3 x 0.1 KB]
+TOTAL: [3.1 KB]
+
+Uniformisation: q.t = 102.204000 x 2.700000 = 275.950800
+Fox-Glynn: left = 0, right = 368
+
+Starting iterations...
+
+Iterative method: 368 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Value in the initial state: 0.999985976945054
+
+Time for model checking: 0.002 seconds.
+
+Result: 0.999985976945054 (value in the initial state)

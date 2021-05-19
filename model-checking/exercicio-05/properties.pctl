@@ -1,0 +1,19 @@
+label "label6" = (s=0);
+label "label5" = (s=1);
+label "label4" = (s=2);
+label "label3" = (s=3);
+label "label2" = (s=4);
+label "label1" = (s=5);
+label "sleep1" = (s=6);
+label "sleep2" = (s=7);
+label "crash" = (s=8);
+label "sleep_mode" = (s=6|s=7);
+
+P=? [ ("sleep1" U "sleep_mode")|("sleep2" U "sleep_mode") ]
+
+P=? [ true U<=8 "crash" ]
+
+P=? [ true U>=2.7 "sleep_mode" ]
+
+P<=0.10 [ true U>=2.7 "sleep_mode" ]
+

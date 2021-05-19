@@ -1,5 +1,7 @@
 ctmc
 
+const double lambda = 1.0;
+
 module ctmc_ex05
 
 	s : [0..8] init 0;
@@ -12,6 +14,6 @@ module ctmc_ex05
 	[] s=5 -> 100 : (s'=6) + 0.1 : (s'=8);
 	[] s=6 -> 6 : (s'=0) + 0.1 : (s'=8);
 	[] s=7 -> 6 : (s'=0) + 0.2 : (s'=6);
-	[] s=8 -> 1 : (s'=8);
+	[] s=8 -> (s'=8);
 
 endmodule
