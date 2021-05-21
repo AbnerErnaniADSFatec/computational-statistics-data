@@ -2,7 +2,7 @@ PRISM
 =====
 
 Version: 4.6
-Date: Wed May 19 08:40:45 BRT 2021
+Date: Fri May 21 11:52:46 BRT 2021
 Hostname: abner-bdc-funcate
 Memory limits: cudd=1g, java(heap)=910.5m
 
@@ -18,7 +18,7 @@ Computing reachable states...
 
 Reachability (BFS): 4 iterations in 0.00 seconds (average 0.000000, setup 0.00)
 
-Time for model construction: 0.027 seconds.
+Time for model construction: 0.016 seconds.
 
 Type:        DTMC
 States:      7 (1 initial)
@@ -60,7 +60,7 @@ Result: true (property satisfied in the initial state)
 
 ---------------------------------------------------------------------
 
-Model checking: P=? [ "b" U<=10 "a" ]
+Model checking: P=? [ ("b") U<=10 ("a") ]
 
 Prob0: 4 iterations in 0.00 seconds (average 0.000000, setup 0.00)
 
@@ -81,13 +81,13 @@ Iterative method: 10 iterations in 0.00 seconds (average 0.000000, setup 0.00)
 
 Value in the initial state: 0.3307799719300919
 
-Time for model checking: 0.029 seconds.
+Time for model checking: 0.001 seconds.
 
 Result: 0.3307799719300919 (value in the initial state)
 
 ---------------------------------------------------------------------
 
-Model checking: P<=0.55 [ "b" U<=10 "a" ]
+Model checking: P<=0.55 [ ("b") U<=10 ("a") ]
 
 Prob0: 4 iterations in 0.00 seconds (average 0.000000, setup 0.00)
 
@@ -104,11 +104,11 @@ TOTAL: [1.6 KB]
 
 Starting iterations...
 
-Iterative method: 10 iterations in 0.01 seconds (average 0.000100, setup 0.01)
+Iterative method: 10 iterations in 0.00 seconds (average 0.000000, setup 0.00)
 
 Property satisfied in 1 of 1 initial states.
 
-Time for model checking: 0.0 seconds.
+Time for model checking: 0.001 seconds.
 
 Result: true (property satisfied in the initial state)
 
@@ -118,6 +118,10 @@ Model checking: P=? [ X ("a"&!("b")) ]
 
 Value in the initial state: 0.0
 
-Time for model checking: 0.001 seconds.
+Time for model checking: 0.0 seconds.
 
 Result: 0.0 (value in the initial state)
+
+Generating random path of length 20 steps...
+
+Generated path: 20 steps

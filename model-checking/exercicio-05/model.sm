@@ -3,7 +3,7 @@ ctmc
 const double gamma = 1/2;
 const double lambda = 1;
 
-module server
+module ctmc_ex5
 
 	s : [0..8] init 0;
 
