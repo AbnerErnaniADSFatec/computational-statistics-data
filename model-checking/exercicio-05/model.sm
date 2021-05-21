@@ -15,7 +15,7 @@ module ctmc_ex5
 	[label2label1] s=4 -> gamma : (s'=5);
 	[label1sleep1] s=5 -> gamma : (s'=6);
 	[label1crash] s=5 -> gamma : (s'=8);
-	[sleep1label6] s=6 -> gamma : (s'=0); 
+	[sleep1label6] s=6 -> gamma : (s'=0);
 	[sleep1crash] s=6 -> gamma : (s'=8);
 	[sleep2label6] s=7 -> gamma : (s'=0);
 	[sleep2sleep1] s=7 -> gamma : (s'=6);
@@ -24,7 +24,7 @@ module ctmc_ex5
 endmodule
 
 rewards "cost_years"
-	
+
 	[label6] s=0 : lambda/0.6;
 	[label5] s=1 : lambda/0.5;
 	[label4] s=2 : lambda/0.4;

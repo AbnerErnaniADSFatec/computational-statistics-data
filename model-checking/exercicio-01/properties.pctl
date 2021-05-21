@@ -1,60 +1,40 @@
-// => Lista de Exercícios Model Checking:
-//
-// Este arquivo implementa as propriedades
-// relaciondadas ao Exercício 1 da Lista.
-//
-// Foi criado um rótulo (label)
-// para a definição de proposições atômicas:
-// AP = {a, b}.
-//
-// Definindo a AP "a" com o conjunto de satisfação:
-// Sat(a) = { s2, s3 }
-//
 label "a" = (s=2|s=3);
-
-// Para "b" o conjunto de satisfação:
-// Sat(b) = { s0, s1, s4, s6 }
-//
 label "b" = (s=0|s=1|s=4|s=6);
 
 // (Exercício 1b) parte 1:
-//
+
 // A probabilidade de que "a" ocorra
 // eventualmente é maior que 80%.
-//
+
 // Verificar o valor da probabilidade de
 // "a" ocorrer eventualmente, iniciando em s0.
-//
-P =? [ true U "a" ]
+P=? [ true U "a" ]
 
 // (Exercício 1b) parte 2
-//
+
 // Verificando se o modelo satisfaz a afrimação
 // do exercício 1b
-//
-P >= 0.8 [ true U "a" ]
+P>=0.8 [ true U "a" ]
 
 // (Exercício 1c) parte 1
-//
+
 // A probabilidade de que "a" ocorra com menos de 10
-// unidades de tempo enquanto "b" ocorre é menor
+// passos enquanto "b" ocorre é menor
 // que 55%.
-//
+
 // Verificar o valor da probabilidade de "a"
 // ocorrer enquanto "b" em menos de 10 ut.
-//
-P =? [ ("b") U <= 10 ("a") ]
+P=? [ ("b") U<=10 ("a") ]
 
 // (Exercício 1c) parte 2
-//
+
 // Verificando se o modelo satisfaz a afrimação
 // do exercício 1c
-//
-P <= 0.55 [ ("b") U <= 10 ("a") ]
+P<=0.55 [ ("b") U<=10 ("a") ]
 
 // (Exercício 1d)
-//
+
 // Qual a probabilidade da próximidade de
 // ocorrência de "a" e não "b"
-//
-P =? [ X ( "a" & !("b") ) ]
+P=? [ X ("a"&!("b")) ]
+
