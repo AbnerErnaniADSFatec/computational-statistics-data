@@ -1,0 +1,42 @@
+ctmc
+
+const double gamma = 1/2;
+const double lambda = 1;
+
+module server
+
+	s : [0..8] init 0;
+
+	[label6] s=0 -> lambda : (s'=1);
+	[label5] s=1 -> lambda : (s'=2);
+	[label4] s=2 -> lambda : (s'=3);
+	[label3] s=3 -> lambda : (s'=4);
+	[label2sleep2] s=4 -> gamma : (s'=7);
+	[label2label1] s=4 -> gamma : (s'=5);
+	[label1sleep1] s=5 -> gamma : (s'=6);
+	[label1crash] s=5 -> gamma : (s'=8);
+	[sleep1label6] s=6 -> gamma : (s'=0); 
+	[sleep1crash] s=6 -> gamma : (s'=8);
+	[sleep2label6] s=7 -> gamma : (s'=0);
+	[sleep2sleep1] s=7 -> gamma : (s'=6);
+	[crash1] s=8 -> (s'=8);
+
+endmodule
+
+rewards "cost_years"
+	
+	[label6] s=0 : lambda/0.6;
+	[label5] s=1 : lambda/0.5;
+	[label4] s=2 : lambda/0.4;
+	[label3] s=3 : lambda/0.3;
+	[label2sleep2] s=4 : lambda/100;
+	[label2label1] s=4 : lambda/0.2;
+	[label1sleep1] s=5 : lambda/100;
+	[label1crash] s=5 : lambda/100;
+	[sleep1label6] s=6 : lambda/6;
+	[sleep1crash] s=6 : lambda/0.1;
+	[sleep2label6] s=7 : lambda/6;
+	[sleep2sleep1] s=7 : lambda/0.2;
+	[crash1] s=8 : lambda/0.1;
+
+endrewards
