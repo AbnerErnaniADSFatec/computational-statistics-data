@@ -11,11 +11,9 @@ label "sleep_mode" = (s=6|s=7);
 
 P=? [ true U (("sleep1" U "sleep_mode")|("sleep2" U "sleep_mode")) ]
 
-P=? [ true U=8 "crash" ]
+P=? [ true U<=8 "crash" ]
 
 P=? [ true U=2.7 "sleep_mode" ]
 
 P<=0.10 [ true U=2.7 "sleep_mode" ]
-
-S=? [ "sleep1" ]
 
