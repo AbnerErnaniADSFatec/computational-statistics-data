@@ -32,7 +32,7 @@ rewards "cost_years"
 	[label2sleep2] s=4 : lambda/100;
 	[label2label1] s=4 : lambda/0.2;
 	[label1sleep1] s=5 : lambda/100;
-	[label1crash] s=5 : lambda/100;
+	[label1crash] s=5 : lambda/0.1;
 	[sleep1label6] s=6 : lambda/6;
 	[sleep1crash] s=6 : lambda/0.1;
 	[sleep2label6] s=7 : lambda/6;
