@@ -1,42 +1,61 @@
+// => Lista de Exercícios Model Checking
+//
+// Continous-Time Marcov Chain - CTMC.
+// Cadeia de Marcov em Tempo Contínuo.
+//
+// Este arquivo .pm possui o código  que implementa
+// o DTMC apresentado no exercício 05 da Lista.
 ctmc
 
-const double gamma = 1/2;
-const double lambda = 1;
-
+// Foi utilizado apenas um módulo para a
+// implementação deste CTMC.
 module ctmc_ex5
 
+	// Definição dos estados
+	// label6 = State0 ou inicial.
 	s : [0..8] init 0;
 
-	[label6] s=0 -> lambda : (s'=1);
-	[label5] s=1 -> lambda : (s'=2);
-	[label4] s=2 -> lambda : (s'=3);
-	[label3] s=3 -> lambda : (s'=4);
-	[label2sleep2] s=4 -> gamma : (s'=7);
-	[label2label1] s=4 -> gamma : (s'=5);
-	[label1sleep1] s=5 -> gamma : (s'=6);
-	[label1crash] s=5 -> gamma : (s'=8);
-	[sleep1label6] s=6 -> gamma : (s'=0);
-	[sleep1crash] s=6 -> gamma : (s'=8);
-	[sleep2label6] s=7 -> gamma : (s'=0);
-	[sleep2sleep1] s=7 -> gamma : (s'=6);
-	[crash1] s=8 -> (s'=8);
+	// Definição dos caminhos
+	// com os 'rates';
+	//
+	// A linguagem PRISM implementa em
+	// [action] guard -> rate_n : update_n;
+	//
+	[label6] s=0 -> 0.6 : (s'=1);
+	[label5] s=1 -> 0.5 : (s'=2);
+	[label4] s=2 -> 0.4 : (s'=3);
+	[label3] s=3 -> 0.3 : (s'=4);
+	[label2] s=4 -> 100 : (s'=7) + 0.2 : (s'=5);
+	[label1] s=5 -> 100 : (s'=6) + 0.1 : (s'=8);
+	[sleep1] s=6 -> 6 : (s'=0) + 0.1 : (s'=8);
+	[sleep2] s=7 -> 6 : (s'=0) + 0.2 : (s'=6);
+	[crash] s=8 -> (s'=8);
 
 endmodule
 
-rewards "cost_years"
+// Aplicação de custos/recompenças
+rewards "cost"
 
-	[label6] s=0 : lambda/0.6;
-	[label5] s=1 : lambda/0.5;
-	[label4] s=2 : lambda/0.4;
-	[label3] s=3 : lambda/0.3;
-	[label2sleep2] s=4 : lambda/100;
-	[label2label1] s=4 : lambda/0.2;
-	[label1sleep1] s=5 : lambda/100;
-	[label1crash] s=5 : lambda/0.1;
-	[sleep1label6] s=6 : lambda/6;
-	[sleep1crash] s=6 : lambda/0.1;
-	[sleep2label6] s=7 : lambda/6;
-	[sleep2sleep1] s=7 : lambda/0.2;
-	[crash1] s=8 : lambda/0.1;
+	// Foi aplicado um custo de uma unidade
+	// para cada transição
+	true: 1;
 
 endrewards
+
+// Os custos com base no gasto em anos
+// de cada transição do modelo.
+// Custo de cada caminho em anos
+// aproximadamente:
+//
+//	[label6] s=0 : lambda/0.6; // 1 ano e 8 meses
+//	[label5] s=1 : lambda/0.5; // 2 anos
+//	[label4] s=2 : lambda/0.4; // 2 anos e 6 meses
+//	[label3] s=3 : lambda/0.3; // 3 anos e 4 meses
+//	[label2sleep2] s=4 : lambda/100; // 3 dias e 14 horas
+//	[label2label1] s=4 : lambda/0.2; // 5 anos
+//	[label1sleep1] s=5 : lambda/100; // 3 dias e 14 horas
+//	[label1crash] s=5 : lambda/0.1; // 10 anos
+//	[sleep1label6] s=6 : lambda/6; // 2 meses
+//	[sleep1crash] s=6 : lambda/0.1; // 10 anos
+//	[sleep2label6] s=7 : lambda/6; // 2 meses
+//	[sleep2sleep1] s=7 : lambda/0.2; // 5 anos

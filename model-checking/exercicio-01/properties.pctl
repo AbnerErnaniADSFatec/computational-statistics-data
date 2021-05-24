@@ -34,7 +34,7 @@ P<=0.55 [ ("b") U<=10 ("a") ]
 
 // (Exercício 1d)
 
-// Qual a probabilidade da próximidade de
+// Qual a probabilidade da proximidade de
 // ocorrência de "a" e não "b"
 P=? [ X ("a"&!("b")) ]
 
